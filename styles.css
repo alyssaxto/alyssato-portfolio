@@ -321,45 +321,38 @@
     background-image: linear-gradient(to right, #dd2476, #ff512f);
   }
   
-  /* Mobile Responsive */
   @media screen and (max-width: 1100px) {
     .main__container {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      justify-content: center;
+      display: flex; /* Change from grid to flex */
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; /* Center items horizontally */
+      justify-content: center; /* Center items vertically */
       width: 100%;
       margin: 0 auto;
       height: 90%;
       padding-left: 0rem;
     }
-    .highlight {
-      color: #ff4f4f; /* You can adjust the color value */
-    }
-    .main__img--container {
-      display: flex;
-      justify-content: center;
-    }
-  
+    
     .main__img--card {
+      margin: 10px;
       height: 425px;
       width: 425px;
     }
-  
+    
     .main__content {
       text-align: center;
       margin-bottom: 4rem;
     }
-  
+    
     .main__content h1 {
       font-size: 2.5rem;
       margin-top: 2rem;
     }
-  
+    
     .main__content h2 {
       font-size: 3rem;
     }
-  
+    
     .main__content p {
       margin-top: 1rem;
       font-size: 1.5rem;
@@ -394,10 +387,6 @@
       margin-top: 2rem;
     }
   
-    .main__btn {
-      padding: 12px 36px;
-      margin: 2.5rem 0;
-    }
   }
   
   /* Projects Section */
@@ -408,7 +397,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    padding: 10rem 0;
+    padding: 11rem 0;
   }
   
   .Projects h1 {
@@ -492,22 +481,7 @@
     transition: color 0.3s ease; /* Add transition effect for smooth color change */
 }
   
-  .Projects__btn {
-    display: flex;
-    justify-content: center;
-    margin-top: 550px;
-  }
-  
-  .Projects__card button {
-    color: #fff;
-    padding: 8px 20px;
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    background: #FFB6C1;
-    font-size: 1rem;
-  }
-  
+
   .Projects__card button:hover {
     cursor: pointer;
   }
@@ -527,15 +501,52 @@
   @media screen and (max-width: 1300px) {
     .Projects__wrapper {
       grid-template-columns: 1fr 1fr;
+      width: 90%;
+    }
+  
+    .Projects__card {
+      margin: 20px; /* Adjust the margin for spacing between cards */
+      margin-bottom: 150px; /* Adjust the bottom margin */
+      height: 250px; /* Adjust the height of the card */
+      width: calc(100% - 10px); /* Adjust the width of the card */
+      /* Other styles remain unchanged */
+    }
+    .Projects__card p {
+      width: calc(100% - 10px); /* Adjust the width of text content */
+      margin-bottom: -30px;
+      /* Other styles remain unchanged */
+    }
+    
+    .Projects__card h2 {
+      text-align: center;
+      width: calc(100% - 10px); /* Adjust the width of text content */
+      /* Other styles remain unchanged */
     }
   }
-  .highlight {
-    color: #ff4f4f; /* You can adjust the color value */
-  }
-  
+
   @media screen and (max-width: 768px) {
     .Projects__wrapper {
       grid-template-columns: 1fr;
+      width: 90%; /* Adjust the width as needed */
+    }
+  
+    .Projects__card {
+      margin: 5px; /* Adjust the margin for spacing between cards */
+      margin-bottom: 150px; /* Adjust the bottom margin */
+      height: 200px; /* Adjust the height of the card */
+      width: calc(100% - 10px); /* Adjust the width of the card */
+      /* Other styles remain unchanged */
+    }
+    .Projects__card p {
+      width: calc(100% - 10px); /* Adjust the width of text content */
+      margin-bottom: -30px;
+      /* Other styles remain unchanged */
+    }
+    
+    .Projects__card h2 {
+      text-align: center;
+      width: calc(100% - 10px); /* Adjust the width of text content */
+      /* Other styles remain unchanged */
     }
   }
   /* Footer Section */
@@ -548,9 +559,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Allow content to wrap */
-    min-height: 120px; /* Set a minimum height for the footer */
+    min-height: 150px; /* Increase the minimum height for the footer */
   }
-  
   .footer__left {
     font-size: 2.5rem;
     padding: 10px;
@@ -586,14 +596,18 @@
   /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .footer {
-    padding: 10px; /* Adjust padding for smaller screens */
+    height: 220px
   }
-  .highlight {
-    color: #ff4f4f; /* You can adjust the color value */
-  }
-  
-  .footer__left,
   .footer__right {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    text-align: right;
+    padding-left: 190px;
+    margin-bottom: 200px;
+  }
+  .footer__bottom {
+    margin-top: 150px;
+  }
+  .footer__left {
     font-size: 1.2rem; /* Adjust font size for smaller screens */
   }
 }
@@ -627,7 +641,6 @@
 .about__content h1 {
   font-size: 2rem;
   background-color: #fe4e4e;
-  background-image: #fe4e4e;
   background-size: 100%;
   font-weight: 600;
   -webkit-background-clip: text;
@@ -640,8 +653,6 @@
 .about__content h2 {
   font-size: 4rem;
   background: #fe4e4e;
-  background: #fe4e4e;
-  background:#fe4e4e;
   background-size: 100%;
 }
 
@@ -650,6 +661,9 @@
   font-size: 1.3rem;
   font-weight: 500;
   color:#000
+}
+.about__img--card img {
+  border-radius: 50px !important; /* or border-radius: 50% !important; */
 }
 
 .about__btn {
@@ -697,15 +711,12 @@
 }
 
 .about__img--card {
-  margin: 10px;
   height: 500px;
   width: 500px;
-  border-radius: 4px;
+  border-radius: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #fff;
-  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
 }
 
 .fa-layer-group,
@@ -730,28 +741,27 @@
     margin: 0 auto;
     height: 90%;
   }
-  .highlight {
-    color: #ff4f4f; /* You can adjust the color value */
-  }
-  
   .about__img--container {
     display: flex;
     justify-content: center;
+    align-items: center; /* Add this line to center vertically */
   }
 
   .about__img--card {
     height: 425px;
     width: 425px;
+    margin-left: 250px;
   }
 
   .about__content {
-    text-align: center;
+    text-align: left;
     margin-bottom: 4rem;
   }
 
   .about__content h1 {
     font-size: 2.5rem;
     margin-top: 2rem;
+    
   }
 
   .about__content h2 {
@@ -962,4 +972,116 @@ h3 {
 iframe {
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .video-container {
+    width: 70%; /* Adjust width for smaller screens */
+    height: 300px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
+  .figma-embed-container{
+    width: 50%; /* Adjust width for smaller screens */
+    height: 600px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+}
+@media screen and (max-width: 768px) {
+  
+  .header__image {
+    max-width: 300px; /* Adjust the max-width to your desired size */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: -30px; /* Adjust the margin-top as needed */
+    margin-bottom: -30px; /* Adjust the margin-bottom as needed */
+    position: relative; /* or absolute, depending on your layout */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__title {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px 20px 30px;
+    font-size: 2.3em;
+    text-align: left;
+    color: #000;
+    font-weight: 600; 
+  }
+  .summary {
+    margin-top: 30px;
+    font-size: 0.9em;
+    font-weight: 100px;
+    line-height: 1.5;
+    
+  }
+  h1 {
+    font-size: 1.7em;
+    text-align: left;
+    margin-bottom: 10px;
+    color: #000;
+    font-weight: 450; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    font-weight: 400; /* Adjust font weight if necessary */
+    color: #787878;
+    font-size: 1em; /* Adjust the font size as needed */
+    margin: 0;
+  }
+  
+  h3 {
+    font-weight: 350; /* Adjust font weight if necessary */
+    color: #787878;
+    font-size: 1.6em; /* Adjust the font size as needed */
+    margin: 0;
+  }
+  .bullets p {
+    max-width: 1000px;
+    font-size: 0.9em;
+    line-height: 1,5;
+  }
+  
+  .bullet-item {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    margin-bottom: 20px;
+    font-size: 1em;
+  }
+  
+  .bullet-content {
+    max-width: 1000px;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  .bullet-image {
+    display: flex;
+    flex-direction: column; /* Arrange images vertically */
+  }
+  
+  .bullet-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  .video-container {
+    width: 90%; /* Adjust width for smaller screens */
+    height: 190px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+
+  .figma-embed-container{
+    width: 50%; /* Adjust width for smaller screens */
+    height: 450px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 20px;
+  }
+
 }
