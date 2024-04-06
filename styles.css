@@ -399,7 +399,7 @@
     height: 100%;
     padding: 11rem 0;
   }
-  
+
   .Projects h1 {
     background-color: #ff8177;
     color: #ff8177;
@@ -522,6 +522,7 @@
       width: calc(100% - 10px); /* Adjust the width of text content */
       /* Other styles remain unchanged */
     }
+    
   }
 
   @media screen and (max-width: 768px) {
