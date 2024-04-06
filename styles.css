@@ -330,11 +330,11 @@
       width: 100%;
       margin: 0 auto;
       height: 90%;
-      padding-left: 0rem;
+      padding-left: 2.5rem;
     }
     
     .main__img--card {
-      margin: 10px;
+      margin: 50px;
       height: 425px;
       width: 425px;
     }
@@ -362,7 +362,7 @@
   @media screen and (max-width: 480px) {
     .main__img--card {
       width: 250px;
-      height: 250px;
+      height: 200px;
     }
   
     .fa-users,
@@ -370,11 +370,11 @@
       font-size: 4rem;
     }
 
-    .highlight {
-      color: #ff4f4f; /* You can adjust the color value */
-    }
     
-  
+    .main__container {
+      padding-left: 2.5rem;
+      margin-bottom: 0rem;
+    }
     .main__content h1 {
       font-size: 2rem;
       margin-top: 3rem;
@@ -438,7 +438,7 @@
     background-position: center;
   }
   .Projects__card:nth-child(2) {
-    background-image: url('img/budgetbuddy.png'); /* Specify the path to your background image */
+    background-image: url('img/icanmanage/c3.png'); /* Specify the path to your background image */
     background-size: cover;
     background-position: center;
   }
@@ -450,7 +450,7 @@
   }
 
   .Projects__card:nth-child(4) {
-    background-image: url('img/budgetbuddy.png'); /* Specify the path to your background image */
+    background-image: url('img/thinkpink/tp10.png'); /* Specify the path to your background image */
     background-size: cover;
     background-position: center;
   }
@@ -593,6 +593,7 @@
     padding: 10px;
     font-size: 0.8rem;
   }
+
   /* Media Query for smaller screens */
 @media screen and (max-width: 768px) {
   .footer {
@@ -778,6 +779,7 @@
   .about__img--card {
     width: 250px;
     height: 250px;
+    margin-left: 0px;
   }
 
   .fa-users,
@@ -961,7 +963,16 @@ h3 {
   width: 800px;
   height: 450px;
   margin: 0 auto; /* Center the iframe horizontally */
+  
 }
+
+.figma-embed-container-desktop{
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 800px;
+  height: 450px;
+  margin: 0 auto; /* Center the iframe horizontally */
+}
+
 .video-container {
   position: relative;
   width: 700px; /* Full width of the viewport */
@@ -1083,5 +1094,54 @@ iframe {
     grid-template-columns: repeat(2, 2fr);
     gap: 20px;
   }
+  .figma-embed-container-desktop{
+    width: 65%; /* Adjust width for smaller screens */
+    height: 250px; /* Let the height adjust automatically to maintain aspect ratio */
+  }
 
 }
+/* Portfolio Button */
+.portfolio__btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio__btn {
+  font-size: 1.3rem;
+  background: #FFB6C1;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.35s;
+  outline: none;
+}
+
+.portfolio__btn a {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-decoration: none;
+}
+
+.portfolio__btn:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #fe4e4e;
+  transition: all 0.35s;
+  border-radius: 10px;
+}
+
+.portfolio__btn:hover {
+  color: #fff;
+}
+
+.portfolio__btn:hover:after {
+  width: 100%;
+}
+
