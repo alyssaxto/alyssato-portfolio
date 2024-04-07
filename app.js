@@ -10,36 +10,17 @@ const mobileMenu = () => {
 
 menu.addEventListener('click', mobileMenu);
 
+// Show active menu when scrolling
 const highlightMenu = () => {
-  const elem = document.querySelector('.highlight');
   const PortfolioMenu = document.querySelector('#Portfolio-page');
   const aboutMenu = document.querySelector('#about-page');
   const ProjectsMenu = document.querySelector('#Projects-page');
-  let scrollPos = window.scrollY;
-
-  // Remove 'highlight' class from 'about' menu item when scrolling down
-  if (scrollPos >= 600 && scrollPos < 1400) {
-    aboutMenu.classList.remove('highlight');
-  }
-
-  // Other logic to add 'highlight' class to menu items based on scroll position
-  if (window.innerWidth > 960 && scrollPos < 600) {
-    PortfolioMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight'); // Make sure 'about' menu item doesn't have 'highlight' class
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 1400) {
-    aboutMenu.classList.add('highlight');
-    PortfolioMenu.classList.remove('highlight');
-    ProjectsMenu.classList.remove('highlight');
-    return;
-  } else if (window.innerWidth > 960 && scrollPos < 2345) {
-    ProjectsMenu.classList.add('highlight');
-    aboutMenu.classList.remove('highlight');
-    return;
-  }
+  
+  // Remove 'highlight' class from all menu items
+  PortfolioMenu.classList.remove('highlight');
+  aboutMenu.classList.remove('highlight');
+  ProjectsMenu.classList.remove('highlight');
 };
-
-
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
