@@ -9,7 +9,6 @@ const mobileMenu = () => {
 };
 
 menu.addEventListener('click', mobileMenu);
-
 // Show active menu when scrolling
 const highlightMenu = () => {
   const PortfolioMenu = document.querySelector('#Portfolio-page');
@@ -20,6 +19,18 @@ const highlightMenu = () => {
   PortfolioMenu.classList.remove('highlight');
   aboutMenu.classList.remove('highlight');
   ProjectsMenu.classList.remove('highlight');
+  
+  // Get the position of the "Projects" section
+  const projectsSection = document.querySelector('#Projects');
+  const projectsSectionPosition = projectsSection.offsetTop;
+  
+  // Get the current scroll position
+  const scrollPos = window.scrollY;
+  
+  // Add 'highlight' class to the "Projects" menu item if the page scrolls to the "Projects" section
+  if (scrollPos >= projectsSectionPosition) {
+    ProjectsMenu.classList.add('highlight');
+  }
 };
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
