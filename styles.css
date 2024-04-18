@@ -857,7 +857,7 @@ h3 {
   font-weight: 600; 
 }
 
-.summary {
+.summary{
   margin-top: 30px;
   font-size: 1.2em;
   font-weight: 100px;
@@ -875,11 +875,10 @@ h3 {
   transform: translateX(-50%);
 }
 
-
 .bullets p {
   max-width: 1000px;
   font-size: 1.2em;
-  line-height: 1,5;
+  line-height: 1.5;
 }
 
 .bullets p::before {
@@ -894,7 +893,11 @@ h3 {
   margin-right: 10px;
 }
 
-
+p {
+  max-width: 1000px;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
 .bullet-item {
   display: flex;
   align-items: left;
@@ -1024,10 +1027,16 @@ iframe {
   }
   .summary {
     margin-top: 30px;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: 100px;
     line-height: 1.5;
     
+  }
+
+  p {
+    max-width: 1000px;
+    font-size: 1em;
+    line-height: 1.5;
   }
   h1 {
     font-size: 1.7em;
@@ -1042,21 +1051,17 @@ iframe {
   h2 {
     font-weight: 400; /* Adjust font weight if necessary */
     color: #787878;
-    font-size: 1em; /* Adjust the font size as needed */
+    font-size: 1.4em; /* Adjust the font size as needed */
     margin: 0;
   }
   
   h3 {
     font-weight: 350; /* Adjust font weight if necessary */
     color: #787878;
-    font-size: 1.6em; /* Adjust the font size as needed */
+    font-size: 1.7em; /* Adjust the font size as needed */
     margin: 0;
   }
-  .bullets p {
-    max-width: 1000px;
-    font-size: 0.9em;
-    line-height: 1,5;
-  }
+ 
   
   .bullet-item {
     display: flex;
