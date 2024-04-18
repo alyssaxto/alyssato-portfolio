@@ -1145,3 +1145,9 @@ iframe {
 .portfolio__btn:hover:after {
   width: 100%;
 }
+
+.logo-text {
+  font-family: 'Silkscreen', sans-serif;
+  font-weight: 400; /* Adjust font weight as needed */
+  /* You can also adjust other styles like font size, color, etc. here */
+}
