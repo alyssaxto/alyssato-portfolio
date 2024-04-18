@@ -203,6 +203,7 @@
     color: #ff4f4f; /* You can adjust the color value */
   }
   /* About Section */
+ 
   .main {
     background-color: #fff;
     padding-top: 5rem;
@@ -222,13 +223,14 @@
     padding: 0 50px;
     padding-left: 15rem;
   }
-  
+
   .main__content {
     color: #000;
     width: 100%;
+    
   }
 
-  
+
   .main__content h2 {
     font-size: 3rem;
     font-weight: 600;
@@ -238,6 +240,7 @@
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    
   }
 
   .main__content p {
@@ -246,7 +249,7 @@
     font-weight: 400;
     
   }
-  
+
   .highlight {
     color: #ff4f4f; /* You can adjust the color value */
   }
@@ -1156,3 +1159,4 @@ iframe {
   font-weight: 400; /* Adjust font weight as needed */
   /* You can also adjust other styles like font size, color, etc. here */
 }
+
