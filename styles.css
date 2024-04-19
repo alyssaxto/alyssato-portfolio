@@ -631,12 +631,12 @@
 @media screen and (max-width: 480px) {
   .footer {
     height: 220px;
-    width: 100%;
   }
   .footer__right {
     font-size: 1.2rem; /* Adjust font size for smaller screens */
     text-align: right; /* Align text to the right */
     margin-bottom: 200px; /* Adjust margin as needed */
+    margin-left: 190px;
   }
   .footer__bottom {
     margin-top: 150px;
