@@ -604,8 +604,27 @@
     font-size: 0.8rem;
   }
 
+    /* Media Query for smaller screens */
+@media screen and (max-width: 820px) {
+  .footer {
+    height: 220px
+  }
+  .footer__right {
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+    text-align: right;
+    padding-left: 580px;
+    margin-bottom: 200px;
+  }
+  .footer__bottom {
+    margin-top: 150px;
+  }
+  .footer__left {
+    font-size: 1.4rem; /* Adjust font size for smaller screens */
+  }
+}
+  
   /* Media Query for smaller screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .footer {
     height: 220px
   }
