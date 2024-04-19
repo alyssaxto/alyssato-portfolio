@@ -2,25 +2,25 @@ const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');
 
-// Add 'active' class to the corresponding menu item based on the current page URL
-var currentPageURL = window.location.href;
 
-if (currentPageURL.includes("about.html")) {
-    document.getElementById("about-page").parentElement.classList.add("active");
-} else if (currentPageURL.includes("index.html")) { // Assuming 'index.html' is your homepage
-    document.getElementById("Portfolio-page").parentElement.classList.add("active");
-}
 
-// Add 'active' class to the corresponding menu item when scrolling
+// Display Mobile Menu
+const mobileMenu = () => {
+  menu.classList.toggle('is-active');
+  menuLinks.classList.toggle('active');
+};
+
+menu.addEventListener('click', mobileMenu);
+// Show active menu when scrolling
 const highlightMenu = () => {
   const PortfolioMenu = document.querySelector('#Portfolio-page');
   const aboutMenu = document.querySelector('#about-page');
   const ProjectsMenu = document.querySelector('#Projects-page');
   
-  // Remove 'active' class from all menu items
-  PortfolioMenu.parentElement.classList.remove('active');
-  aboutMenu.parentElement.classList.remove('active');
-  ProjectsMenu.parentElement.classList.remove('active');
+  // Remove 'highlight' class from all menu items
+  PortfolioMenu.classList.remove('highlight');
+  aboutMenu.classList.remove('highlight');
+  ProjectsMenu.classList.remove('highlight');
   
   // Get the position of the "Projects" section
   const projectsSection = document.querySelector('#Projects');
@@ -29,18 +29,13 @@ const highlightMenu = () => {
   // Get the current scroll position
   const scrollPos = window.scrollY;
   
-  // Add 'active' class to the corresponding menu item if the page scrolls to the corresponding section
+  // Add 'highlight' class to the "Projects" menu item if the page scrolls to the "Projects" section
   if (scrollPos >= projectsSectionPosition) {
-    ProjectsMenu.parentElement.classList.add('active');
-  } else if (scrollPos < projectsSectionPosition && currentPageURL.includes("index.html")) {
-    PortfolioMenu.parentElement.classList.add('active');
-  } else if (scrollPos < projectsSectionPosition && currentPageURL.includes("about.html")) {
-    aboutMenu.parentElement.classList.add('active');
+    ProjectsMenu.classList.add('highlight');
   }
 };
-
 window.addEventListener('scroll', highlightMenu);
-
+window.addEventListener('click', highlightMenu);
 
 //  Close mobile Menu when clicking on a menu item
 const hideMobileMenu = () => {
