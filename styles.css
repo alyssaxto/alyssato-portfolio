@@ -301,6 +301,7 @@
   margin: 10px;
   height: 211px;
   width: 305px;
+  scale: 100%;
   border-radius: 4px;
   display: flex;
   justify-content: center;
@@ -1160,3 +1161,15 @@ iframe {
   /* You can also adjust other styles like font size, color, etc. here */
 }
 
+@keyframes bobbing {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+#arrow {
+  animation: bobbing 1.5s infinite;
+  display: inline-block;
+  transform-origin: center;
+  transition: transform 0.2s ease;
+}
