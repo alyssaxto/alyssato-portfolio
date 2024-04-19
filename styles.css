@@ -404,6 +404,17 @@
     padding: 6rem 0;
   }
 
+  h1 {
+    font-size: 24px;
+    color: #ff8177; /* Pink color */
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+
+  /* Styling for the anchor tag within h1 */
+  h1 a {
+      text-decoration: none; /* Remove underline */
+      color: #ff8177; /* Pink color */
+  }
   .Projects h1 {
     background-color: #ff8177;
     color: #ff8177;
@@ -413,6 +424,7 @@
     margin-top: 0;
     margin-bottom: 0;
     font-size: 2.5rem;
+    text-decoration: none;
     font-weight: 500;
   }
   
