@@ -430,7 +430,7 @@
     transition: 0.3s ease-in;
   }
   .Projects__card:nth-child(1) {
-    background-image: url('img/budgetbuddy.png'); /* Specify the path to your background image */
+    background-image: url('img/stemuli/s17.png'); /* Specify the path to your background image */
     background-size: cover;
     background-position: center;
   }
@@ -441,7 +441,7 @@
   }
   
   .Projects__card:nth-child(3) {
-    background-image: url('img/stemuli/s17.png'); /* Specify the path to your background image */
+    background-image: url('img/budgetbuddy.png'); /* Specify the path to your background image */
     background-size: cover;
     background-position: center;
   }
