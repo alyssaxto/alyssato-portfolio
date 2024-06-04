@@ -218,8 +218,8 @@
     margin: 0 auto;
     height: 90%;
     z-index: 1;
+    max-width: 1700px;
     width: 100%;
-    max-width: 85%;
     padding: 0 50px;
     padding-left: 18rem;
   }
@@ -323,7 +323,7 @@
     background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
     background-image: linear-gradient(to right, #dd2476, #ff512f);
   }
-  
+
   @media screen and (max-width: 1100px) {
     .main__container {
       display: flex; /* Change from grid to flex */
