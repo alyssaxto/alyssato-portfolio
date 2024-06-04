@@ -648,7 +648,7 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  height: 90%;
+  height: auto;
   z-index: 1;
   width: 100%;
   max-width: 1300px;
@@ -761,7 +761,7 @@
     justify-content: center;
     width: 100%;
     margin: 0 auto;
-    height: 90%;
+    height: 100%;
   }
   .about__img--container {
     display: flex;
